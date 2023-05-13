@@ -59,3 +59,10 @@ while True:
         except IndexError:
             print("There is no item with that number.")
             continue
+
+    elif user_action.startswith('exit'):
+        break
+    else:
+        print("Command is not valid.")
+
+print("Bye!")
