@@ -42,3 +42,20 @@ while True:
         except ValueError:
             print("Your command is not valid.")
             continue
+
+    elif user_action.startswith('complete'):
+        try:
+            number = int(user_action[9:])
+
+            todos = functions.get_todos()
+            index = number - 1
+            todo_to_remove = todos[index].strip('\n')
+            todos.pop(index)
+
+            functions.write_todos(todos)
+
+            message = f"Todo {todo_to_remove} was removed from the list."
+            print(message)
+        except IndexError:
+            print("There is no item with that number.")
+            continue
