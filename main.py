@@ -25,3 +25,20 @@ while True:
             item = item.strip('\n')
             row = f"{index + 1}-{item}"
             print(row)
+
+    elif user_action.startswith('edit'):
+        try:
+            number = int(user_action[5:])
+            print(number)
+
+            number = number - 1
+
+            todos = functions.get_todos()
+
+            new_todo = input("Enter new todo: ")
+            todos[number] = new_todo + '\n'
+
+            functions.write_todos()
+        except ValueError:
+            print("Your command is not valid.")
+            continue
