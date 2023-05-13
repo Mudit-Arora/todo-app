@@ -1,4 +1,5 @@
-cleaning
-Master ML
+clean
+Master Python
 make food
 drink
+studying
