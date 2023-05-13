@@ -16,3 +16,12 @@ while True:
         todos.append(todo + '\n')
 
         functions.write_todos(todos)
+
+    elif user_action.startswith('show'):
+
+        todos = functions.get_todos()
+
+        for index, item in enumerate(todos):
+            item = item.strip('\n')
+            row = f"{index + 1}-{item}"
+            print(row)
