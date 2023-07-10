@@ -1,6 +1,2 @@
-clean
-Master Python
-make food
-drink
-studying
-check
+sleep
+shower
