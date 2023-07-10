@@ -3,3 +3,4 @@ Master Python
 make food
 drink
 studying
+check
